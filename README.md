@@ -19,6 +19,46 @@ directly created at SES (without import keil project).
 
 Following lines changed as above according to "https://devzone.nordicsemi.com/f/nordic-q-a/23232/hardfault_handler-for-segger-embedded-studio".
 
+# Odometre intro
+I bought it a few years back and saw it lying around. Why not try a new project?
+This is based of the PCA20006 board from Nordic Semiconductors, a Bluetooth Low
+Energy device. It runs its own "operating system" called SoftDevice and this is
+what the application was built upon i.e. using the abstractions instead of bare-
+metal development. This SDK is no longer developed and is relatively old. Nordic
+has since ported all to the Zephyr Project.
+
+# Command line and how-to
+
+Start the GDB server. Assumes you installed openocd and its dependencies
+`openocd -f /usr/share/openocd/scripts/interface/stlink-v2.cfg -f /usr/share/openocd/scripts/target/nrf51.cfg`
+
+You may use an IDE to debug, otherwise, connect to the GDB server via telnet. Segger Embedded Studio was used for debugging.
+You first need to program the softdevice. **Only** use mass_erase to program the softdevice. To program you application, use the
+same commands below but skip the `mass_erase` line. The Softdevice sits at base of flash, then your application follows.
+```
+telnet localhost 4444
+reset
+halt
+nrf51 mass_erase 0
+program <path to hex file> verify
+```
+
+Never used this command because I didn't have a JLink
+`nrfjprog --family NRF51 --eraseall --port 3333 --ip 127.0.0.1`
+
+#### Internal configurations
+* Pull up resistors in P008 and P018 is enabled
+
+#### Self.comments
+
+I would eventually learn that I didn't need Segger Embedded Studio (SES) for deve-
+lopment, and I could have simply called a makefile in armgcc to do compile all. It didn't occur
+to me that the SDK was fairly self-contained and using SES was uneccessary for development.
+There is no SES project file released by Nordic for v12.3.0 to work with SES. You have to configure all yourself. When it became important to debug, I went through the pain of configuring the IDE. I would eventually find this current repo (which I forked) to be sufficient and continue development from there [This guy's video](https://www.youtube.com/watch?v=o_9Lmm0SYr8) may help
+
+There is a file `/usr/bin/cmsis-conf` for configuring your sdk_config.h file. This is a
+shell scriptt that encapsulates the CMSIS configuration wizard. You can find it on the internet and I think it ships with the SDK too.
+
 
 # Useful links and references
 
