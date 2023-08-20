@@ -17,8 +17,8 @@ extern "C" {
 */
 #define HIGH 1
 #define LOW 0
-#define digitalWrite(pin, value) if (value) bsp_board_led_off(bsp_board_pin_to_led_idx(pin)); else \
-    bsp_board_led_on(bsp_board_pin_to_led_idx(pin))
+#define digitalWrite(pin, value) if (value) { nrf_gpio_pin_write(pin, LEDS_ACTIVE_STATE ? 0 : 1); } \
+  else { nrf_gpio_pin_write(pin, LEDS_ACTIVE_STATE ? 1 : 0); }
 
 
 #define OUTPUT 1    // INPUT not used

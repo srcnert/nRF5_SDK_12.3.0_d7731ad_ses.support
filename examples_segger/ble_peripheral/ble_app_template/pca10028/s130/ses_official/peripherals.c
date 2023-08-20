@@ -49,7 +49,8 @@ void pp_spi_init( void )
     DISPLAY_spi_config.ss_pin = DISPLAY_CE;
     DISPLAY_spi_config.mosi_pin = DISPLAY_DIN;
     DISPLAY_spi_config.sck_pin  = DISPLAY_CLK;
-   //bsp_board_led_invert(bsp_board_pin_to_led_idx(DISPLAY_BACKLIGHT));
+    nrf_gpio_cfg_output(DISPLAY_RESET);
+    nrf_gpio_cfg_output(DISPLAY_DC);
     APP_ERROR_CHECK(nrf_drv_spi_init(&spi_object, &DISPLAY_spi_config, spi_event_handler));
     DISPLAY_BACKLIGHT_OFF;
 }
