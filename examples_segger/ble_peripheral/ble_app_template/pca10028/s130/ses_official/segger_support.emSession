@@ -5,24 +5,22 @@
   <Exceptions set="HardFault"/>
  </Breakpoints>
  <ExecutionProfileWindow/>
- <FrameBufferWindow>
-  <FrameBufferWindow bufferHeight="-1" addressSpace="" addressText="" bufferWidth="-1"/>
- </FrameBufferWindow>
+ <FrameBuffer/>
  <Memory1>
-  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="ble_app_template_pca10028_s130" radix="16" sizeText="" addressText=""/>
-  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="segger_support" radix="16" sizeText="" addressText=""/>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" viewType="4" addressOrder="0" columnsText="" refreshPeriod="0" name="ble_app_template_pca10028_s130" sizeText="" addressText=""/>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" viewType="4" addressOrder="0" columnsText="" refreshPeriod="0" name="segger_support" sizeText="" addressText=""/>
  </Memory1>
  <Memory2>
-  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="ble_app_template_pca10028_s130" radix="16" sizeText="" addressText=""/>
-  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="segger_support" radix="16" sizeText="" addressText=""/>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" viewType="4" addressOrder="0" columnsText="" refreshPeriod="0" name="ble_app_template_pca10028_s130" sizeText="" addressText=""/>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" viewType="4" addressOrder="0" columnsText="" refreshPeriod="0" name="segger_support" sizeText="" addressText=""/>
  </Memory2>
  <Memory3>
-  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="ble_app_template_pca10028_s130" radix="16" sizeText="" addressText=""/>
-  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="segger_support" radix="16" sizeText="" addressText=""/>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" viewType="4" addressOrder="0" columnsText="" refreshPeriod="0" name="ble_app_template_pca10028_s130" sizeText="" addressText=""/>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" viewType="4" addressOrder="0" columnsText="" refreshPeriod="0" name="segger_support" sizeText="" addressText=""/>
  </Memory3>
  <Memory4>
-  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="ble_app_template_pca10028_s130" radix="16" sizeText="" addressText=""/>
-  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="segger_support" radix="16" sizeText="" addressText=""/>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" viewType="4" addressOrder="0" columnsText="" refreshPeriod="0" name="ble_app_template_pca10028_s130" sizeText="" addressText=""/>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" viewType="4" addressOrder="0" columnsText="" refreshPeriod="0" name="segger_support" sizeText="" addressText=""/>
  </Memory4>
  <Project>
   <ProjectSessionItem path="segger_support"/>
@@ -64,8 +62,8 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="100" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../main.c" selected="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="82" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/util/app_util.h" selected="0" top="66" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="100" useTextEdit="1" path="../../../main.c" left="0" top="67" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="82" useTextEdit="1" path="../../../../../../components/libraries/util/app_util.h" left="0" selected="1" top="66" codecName="Default"/>
  </Files>
- <ARMCrossStudioWindow activeProject="segger_support" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Release" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Users/SADELABS03/Desktop/nRF5_SDK_12.3.0_d7731ad/components/toolchain" debugSearchPath="" autoConnectCapabilities="3199"/>
+ <EMStudioWindow activeProject="segger_support" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3199"/>
 </session>
