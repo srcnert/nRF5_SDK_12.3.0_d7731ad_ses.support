@@ -85,7 +85,7 @@ extern "C" {
 #define RTS_PIN_NUMBER 11
 #define HWFC           false
 
-#define NRF_CLOCK_LFCLKSRC      {.source = NRF_CLOCK_LF_SRC_RC, .rc_ctiv = 1, .rc_temp_ctiv = 2, .xtal_accuracy=NRF_CLOCK_LF_XTAL_ACCURACY_250_PPM}
+#define NRF_CLOCK_LFCLKSRC      {.source = NRF_CLOCK_LF_SRC_RC, .rc_ctiv = 1, .rc_temp_ctiv = 0, .xtal_accuracy=NRF_CLOCK_LF_XTAL_ACCURACY_250_PPM}
 
 #ifdef __cplusplus
 }
