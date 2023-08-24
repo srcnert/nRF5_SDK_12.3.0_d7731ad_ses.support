@@ -13,7 +13,7 @@
 
 
 #ifndef BLE_ADVERTISING_ENABLED
-#define BLE_ADVERTISING_ENABLED 0
+#define BLE_ADVERTISING_ENABLED 1
 #endif
 
 // <q> BLE_DTM_ENABLED  - ble_dtm - Module for testing RF/PHY using DTM commands
@@ -41,7 +41,7 @@
 
 
 #ifndef PEER_MANAGER_ENABLED
-#define PEER_MANAGER_ENABLED 0
+#define PEER_MANAGER_ENABLED 1
 #endif
 
 // </h>
@@ -75,7 +75,7 @@
 
 
 #ifndef BLE_BAS_ENABLED
-#define BLE_BAS_ENABLED 0
+#define BLE_BAS_ENABLED 1
 #endif
 
 // <q> BLE_CSCS_ENABLED  - ble_cscs - Cycling Speed and Cadence Service
@@ -96,7 +96,7 @@
 
 
 #ifndef BLE_DIS_ENABLED
-#define BLE_DIS_ENABLED 0
+#define BLE_DIS_ENABLED 1
 #endif
 
 // <q> BLE_GLS_ENABLED  - ble_gls - Glucose Service
@@ -131,7 +131,7 @@
 
 
 #ifndef BLE_HRS_ENABLED
-#define BLE_HRS_ENABLED 0
+#define BLE_HRS_ENABLED 1
 #endif
 
 // <q> BLE_HTS_ENABLED  - ble_hts - Health Thermometer Service
@@ -180,14 +180,14 @@
 
 
 #ifndef BLE_NUS_C_ENABLED
-#define BLE_NUS_C_ENABLED 0
+#define BLE_NUS_C_ENABLED 1
 #endif
 
 // <q> BLE_NUS_ENABLED  - ble_nus - Nordic UART Service
 
 
 #ifndef BLE_NUS_ENABLED
-#define BLE_NUS_ENABLED 0
+#define BLE_NUS_ENABLED 1
 #endif
 
 // <q> BLE_RSCS_C_ENABLED  - ble_rscs_c - Running Speed and Cadence Client
@@ -3078,7 +3078,7 @@
 // <e> FDS_ENABLED - fds - Flash data storage module
 //==========================================================
 #ifndef FDS_ENABLED
-#define FDS_ENABLED 0
+#define FDS_ENABLED 1
 #endif
 #if  FDS_ENABLED
 // <o> FDS_OP_QUEUE_SIZE - Size of the internal queue.
@@ -3126,7 +3126,7 @@
 // <e> FSTORAGE_ENABLED - fstorage - Flash storage module
 //==========================================================
 #ifndef FSTORAGE_ENABLED
-#define FSTORAGE_ENABLED 0
+#define FSTORAGE_ENABLED 1
 #endif
 #if  FSTORAGE_ENABLED
 // <o> FS_QUEUE_SIZE - Configures the size of the internal queue.
