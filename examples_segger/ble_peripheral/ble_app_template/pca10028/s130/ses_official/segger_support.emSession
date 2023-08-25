@@ -2,7 +2,7 @@
 <session>
  <Bookmarks/>
  <Breakpoints groups="Breakpoints" active_group="Breakpoints">
-  <BreakpointListItem trigger="" line="35" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../../../../components/ble/ble_advertising/ble_advertising.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="35" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../../../../components/ble/ble_advertising/ble_advertising.c" useHWbreakpoint="false"/>
  </Breakpoints>
  <ExecutionProfileWindow/>
  <FrameBuffer>
@@ -35,8 +35,6 @@
   <ProjectSessionItem path="segger_support;segger_support;Application;adafruit"/>
   <ProjectSessionItem path="segger_support;segger_support;Board Definition"/>
   <ProjectSessionItem path="segger_support;segger_support;Board Support"/>
-  <ProjectSessionItem path="segger_support;segger_support;nRF_BLE"/>
-  <ProjectSessionItem path="segger_support;segger_support;nRF_Drivers"/>
   <ProjectSessionItem path="segger_support;segger_support;nRF_Libraries"/>
  </Project>
  <Register1>
@@ -78,18 +76,12 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="32" useTextEdit="1" path="main.cpp" left="0" top="23" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="140" useTextEdit="1" path="../../../../../../components/libraries/util/app_error.c" left="0" top="106" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="36" y="52" useTextEdit="1" path="peripherals.c" left="0" top="45" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="15" y="47" useTextEdit="1" folds0="74,113,119,125,168,173,185,408,433,528" path="../../../../../../components/libraries/bsp/bsp.c" left="0" top="128" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="19" y="45" useTextEdit="1" openedFrom="/home/eyi/Projects/nRF5_SDK_12.3.0_d7731ad_ses.support/components/libraries/bsp/bsp.c" path="../../../../../../components/boards/boards.h" left="0" top="45" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="89" useTextEdit="1" openedFrom="/home/eyi/Projects/nRF5_SDK_12.3.0_d7731ad_ses.support/components/boards/boards.h" path="../../../../../../components/boards/custom_board.h" left="0" top="76" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="83" y="151" useTextEdit="1" openedFrom="/home/eyi/Projects/nRF5_SDK_12.3.0_d7731ad_ses.support/examples_segger/ble_peripheral/ble_app_template/pca10028/s130/ses_official/nordic.c" path="../../../../../../components/softdevice/s130/headers/nrf_sdm.h" left="0" top="145" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="15" y="845" useTextEdit="1" path="../../../../../../components/ble/peer_manager/id_manager.c" left="0" top="36" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="43" y="344" useTextEdit="1" folds0="192,204,219,225,334,356,364,370,379,406,414,443,451,461,466,495,501,528,533,591,594,618,621,639,650,661,666,671,674,694,701,722,727,803,811,832,849,888,923,929,970,1004,1013" path="nordic2.c" left="0" selected="1" top="306" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="24" y="117" useTextEdit="1" folds0="84,96,108,112,118,173,192" path="nordic.c" left="0" top="92" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="4" y="18" useTextEdit="1" path="nordic.h" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="74" useTextEdit="1" path="../../../../../../components/ble/ble_advertising/ble_advertising.c" left="0" top="69" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="515" useTextEdit="1" folds0="125,131,155,166,180,193,205,229,254,275,298,414,449,560,591" path="nordic3.c" left="0" top="246" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="15" y="48" useTextEdit="1" path="../../../../../../components/libraries/bsp/bsp.c" left="0" top="39" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="20" y="45" useTextEdit="1" openedFrom="/home/eyi/Projects/nRF5_SDK_12.3.0_d7731ad_ses.support/components/libraries/bsp/bsp.c" path="../../../../../../components/boards/boards.h" left="0" top="39" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="87" useTextEdit="1" openedFrom="/home/eyi/Projects/nRF5_SDK_12.3.0_d7731ad_ses.support/components/boards/boards.h" path="../../../../../../components/boards/custom_board.h" left="0" top="77" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="32" useTextEdit="1" path="main.cpp" left="0" selected="1" top="23" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="140" useTextEdit="1" path="../../../../../../components/libraries/util/app_error.c" left="0" top="128" codecName="Default"/>
  </Files>
- <EMStudioWindow activeProject="segger_support" fileDialogDefaultFilter="*.c" autoConnectTarget="GDB Server" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="/home/eyi/Projects/nRF5_SDK_12.3.0_d7731ad_ses.support/components/ble/ble_services/ble_bas" debugSearchPath="" autoConnectCapabilities="1343"/>
+ <EMStudioWindow activeProject="segger_support" fileDialogDefaultFilter="*.c" autoConnectTarget="GDB Server" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="/home/eyi/Projects/nRF5_SDK_12.3.0_d7731ad_ses.support/components/ble/ble_services/ble_nus" debugSearchPath="" autoConnectCapabilities="1343"/>
 </session>
