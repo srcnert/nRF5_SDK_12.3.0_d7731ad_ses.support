@@ -7,6 +7,8 @@ extern "C" {
 
 #include <bsp.h>
 
+#define DEBUG_MODE_PRINTING 1
+
 #define DISPLAY_SPI_INSTANCE  0 /**< SPI instance index. */
 #define SPI0_INSTANCE_INDEX 0
 #define SPI1_INSTANCE_INDEX SPI0_INSTANCE_INDEX+SPI0_ENABLED

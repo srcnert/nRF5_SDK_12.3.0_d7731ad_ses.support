@@ -96,11 +96,11 @@ static void CopeWitData(uint8_t ucIndex, uint16_t *p_data, uint32_t uiLen)
     uiReg1Len = 4;
     switch(ucIndex)
     {
-        case WIT_ACC:   uiReg1 = AX;    uiReg1Len = 3;  uiReg2 = TEMP;  uiReg2Len = 1;  break;
+        case WIT_ACC:   uiReg1 = AX;    uiReg1Len = 3;  uiReg2 = WITTEMP;  uiReg2Len = 1;  break;
         case WIT_ANGLE: uiReg1 = Roll;  uiReg1Len = 3;  uiReg2 = VERSION;  uiReg2Len = 1;  break;
         case WIT_TIME:  uiReg1 = YYMM;	break;
-        case WIT_GYRO:  uiReg1 = GX;  uiLen = 3;break;
-        case WIT_MAGNETIC: uiReg1 = HX;  uiLen = 3;break;
+        case WIT_GYRO:  uiReg1 = GX;  break;
+        case WIT_MAGNETIC: uiReg1 = HX;  break;
         case WIT_DPORT: uiReg1 = D0Status;  break;
         case WIT_PRESS: uiReg1 = PressureL;  break;
         case WIT_GPS:   uiReg1 = LonL;  break;
@@ -154,10 +154,10 @@ void WitSerialDataIn(uint8_t ucData)
                     memcpy(s_ucWitDataBuff, &s_ucWitDataBuff[1], s_uiWitDataCnt);
                     return ;
                 }
-                usData[0] = ((uint16_t)s_ucWitDataBuff[3] << 8) | (uint16_t)s_ucWitDataBuff[2];
-                usData[1] = ((uint16_t)s_ucWitDataBuff[5] << 8) | (uint16_t)s_ucWitDataBuff[4];
-                usData[2] = ((uint16_t)s_ucWitDataBuff[7] << 8) | (uint16_t)s_ucWitDataBuff[6];
-                usData[3] = ((uint16_t)s_ucWitDataBuff[9] << 8) | (uint16_t)s_ucWitDataBuff[8];
+                usData[0] = ((uint16_t)s_ucWitDataBuff[3] << 8) | s_ucWitDataBuff[2];
+                usData[1] = ((uint16_t)s_ucWitDataBuff[5] << 8) | s_ucWitDataBuff[4];
+                usData[2] = ((uint16_t)s_ucWitDataBuff[7] << 8) | s_ucWitDataBuff[6];
+                usData[3] = ((uint16_t)s_ucWitDataBuff[9] << 8) | s_ucWitDataBuff[8];
                 CopeWitData(s_ucWitDataBuff[1], usData, 4);
                 s_uiWitDataCnt = 0;
             }
@@ -497,6 +497,5 @@ int32_t WitSetContent(int32_t uiRsw)
 	if(WitWriteReg(RSW, uiRsw) != WIT_HAL_OK)	return  WIT_HAL_ERROR;
 	return WIT_HAL_OK;
 }
-
 
 

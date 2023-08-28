@@ -26,7 +26,6 @@ extern "C" {
 #define WIT_PROTOCOL_CAN    2
 #define WIT_PROTOCOL_I2C    3
 
-
 /* serial function */
 typedef void (*SerialWrite)(uint8_t *p_ucData, uint32_t uiLen);
 int32_t WitSerialWriteRegister(SerialWrite write_func);
