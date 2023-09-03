@@ -14,11 +14,13 @@
     <configuration
       LIBRARY_IO_TYPE="RTT"
       Name="Common"
+      WARNING_LEVEL="2 (Standard)"
       arm_architecture="v6M"
       arm_core_type="Cortex-M0"
       arm_endian="Little"
       arm_fp_abi="Soft"
       arm_fpu_type="None"
+      arm_library_optimization="Small"
       arm_linker_heap_size="1024"
       arm_linker_process_stack_size="0"
       arm_linker_stack_size="1024"
@@ -33,6 +35,10 @@
       debug_start_from_entry_point_symbol="No"
       debug_target_connection="GDB Server"
       gcc_cplusplus_language_standard="c++11"
+      gcc_debugging_level="Level 3"
+      gcc_strict_prototypes_warning="None"
+      gcc_uninitialized_variables_warning="Yes"
+      gcc_unused_variable_warning="Yes"
       gdb_server_allow_memory_access_during_execution="Yes"
       gdb_server_autostart_server="No"
       gdb_server_command_line=""
@@ -136,7 +142,9 @@
       <file file_name="../../../../../../components/libraries/button/app_button.c" />
       <file file_name="../../../../../../components/libraries/util/app_error.c" />
       <file file_name="../../../../../../components/libraries/util/app_error_weak.c" />
-      <file file_name="../../../../../../components/libraries/fifo/app_fifo.c" />
+      <file file_name="../../../../../../components/libraries/fifo/app_fifo.c">
+        <configuration Name="Debug" build_exclude_from_build="No" />
+      </file>
       <file file_name="../../../../../../components/libraries/timer/app_timer.c" />
       <file file_name="../../../../../../components/libraries/uart/app_uart.c">
         <configuration Name="Debug" build_exclude_from_build="Yes" />
