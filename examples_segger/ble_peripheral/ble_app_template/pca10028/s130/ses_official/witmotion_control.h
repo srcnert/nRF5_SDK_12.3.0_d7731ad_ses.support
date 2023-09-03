@@ -6,7 +6,9 @@
 extern "C" {
 #endif
 
-#define WITMOTION_POLLING_INTERVAL 100
+#define WIT_MAX_PERIOD 50  // max frequency = 200Hz
+#define WIT_TIME_TO_WAIT_FOR_DATA 100
+#define WIT_DATA_REQUEST_TIMEOUT 200
 
 typedef struct
 {
@@ -15,10 +17,20 @@ typedef struct
   float angle[3];
 } witmotion_data; 
 
+enum wit_definition {
+  WIT_REQ_SUCCESS = 0,
+  WIT_DATA_READY,
+  WIT_DATA_NOT_READY,
+  WIT_REQ_TIMEOUT
+};
+  
+
 void witmotion_init( int start_or_stop );
-int wit_make_data_request( void );
+void wit_make_data_request( void );
 int wit_check_data_ready( void );
-void wit_read_data( witmotion_data *data );
+witmotion_data *wit_read_data( void );
+void show_stats( void );
+void show_data( void );
 
 
 #ifdef __cplusplus
