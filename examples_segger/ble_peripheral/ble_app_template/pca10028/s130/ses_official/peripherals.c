@@ -39,6 +39,7 @@ void pp_spi_init( void )
     nrf_gpio_cfg_output(DISPLAY_RESET);
     nrf_gpio_cfg_output(DISPLAY_DC);
     APP_ERROR_CHECK(nrf_drv_spi_init(&spi_object, &DISPLAY_spi_config, spi_event_handler));
+    //APP_ERROR_CHECK(nrf_drv_spi_init(&spi_object, &DISPLAY_spi_config, NULL));
     DISPLAY_BACKLIGHT_OFF;
 }
 

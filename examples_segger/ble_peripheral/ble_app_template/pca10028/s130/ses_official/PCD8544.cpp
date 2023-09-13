@@ -23,7 +23,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
 
 // #include <util/delay.h>   // why not just use delay(500) instead of _delay_ms(500)
-#include <stdlib.h>
+#include <cstdlib>
 #include <cstring>
 #include "Arduino.h"
 #include "PCD8544.h"
@@ -193,17 +193,23 @@ void PCD8544::write(uint8_t c) {
 void PCD8544::print(const uint8_t *str) {
   // C++ monstousity to convert const to non-const
   const char *c = reinterpret_cast<char*>(const_cast<uint8_t*>(str));
-  adafruit_longwrite( const_cast<uint8_t*>(str), strlen(c) );
+  size_t n = std::strlen(c);
+  for(int i=0; i<n; i++) write(*(c+i));
 }
 
 void PCD8544::print(const char *str) {
-  adafruit_longwrite( const_cast<uint8_t*>(reinterpret_cast<const uint8_t*>(str)), strlen(str) );
+  print( const_cast<uint8_t*>(reinterpret_cast<const uint8_t*>(str)));
 }
 
 void PCD8544::println(const uint8_t *str) {
-  char c = '\n';
-  print(str);
-  print(&c);
+  static const char c[] = "\r\n";
+  const size_t n = std::strlen(reinterpret_cast<char*>(const_cast<uint8_t*>(str)));
+  char *k = reinterpret_cast<char*>(std::malloc(n + 3)); // strlen(c) + '\0'
+  std::memcpy(k, str, n);
+  std::memcpy(k+n, c, 2);
+  k[n+3] = '\0';
+  print(const_cast<char*>(k));
+  std::free(k);
 }
 
 void PCD8544::setCursor(uint8_t x, uint8_t y){

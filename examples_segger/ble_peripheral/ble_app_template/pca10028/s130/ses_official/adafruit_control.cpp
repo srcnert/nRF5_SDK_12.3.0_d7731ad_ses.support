@@ -26,13 +26,3 @@ void adafruit_spiwrite (uint8_t c)
 {
   spi_write(&c, 1);
 }
-
-void adafruit_longwrite (uint8_t *c, uint16_t len)
-{
-  spi_write(c, len);
-}
-
-void adafruit_print( char c )
-{
-  app_uart_put(c);
-}

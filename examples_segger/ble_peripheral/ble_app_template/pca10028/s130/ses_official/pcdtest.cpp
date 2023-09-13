@@ -123,6 +123,7 @@ void testdrawcircle(void) {
 
 void testdrawrect(void) {
   for (uint8_t i=0; i<48; i+=2) {
+    delay(1000);
     nokia.drawrect(i, i, 96-i, 48-i, BLACK);
   }
 }
