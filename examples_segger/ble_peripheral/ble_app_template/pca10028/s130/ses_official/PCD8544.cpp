@@ -205,6 +205,10 @@ void PCD8544::println(const uint8_t *str) {
   static const char c[] = "\r\n";
   const size_t n = std::strlen(reinterpret_cast<char*>(const_cast<uint8_t*>(str)));
   char *k = reinterpret_cast<char*>(std::malloc(n + 3)); // strlen(c) + '\0'
+  if (k == nullptr) {
+    // TODO: log to error page
+    return;
+  }
   std::memcpy(k, str, n);
   std::memcpy(k+n, c, 2);
   k[n+3] = '\0';
