@@ -39,61 +39,40 @@ void adafruit_test( void ) {
 
   // show splashscreen
   nokia.display();
-  //delay(2000);
+  delay(2000);
   nokia.clear();
 
   // draw a single pixel
   nokia.setPixel(10, 10, BLACK);
   nokia.display();        // show the changes to the buffer
-  delay(2000);
+  delay(500);
   nokia.clear();
 
    // draw many lines
   testdrawline();
   nokia.display();       // show the lines
- // nokia.clear();
-
-  // draw rectangles
-  testdrawrect();
-  nokia.display();
-  delay(2000);
-  nokia.clear();
-
-  // draw multiple rectangles
-  testfillrect();
-  nokia.display();
-  delay(2000);
+  delay(500);
   nokia.clear();
 
   // draw mulitple circles
   testdrawcircle();
   nokia.display();
-  delay(2000);
+  delay(500);
   nokia.clear();
 
   // draw the first ~120 characters in the font
   testdrawchar();
   nokia.display();
-  delay(2000);
+  delay(500);
   nokia.clear();
 
   // draw a string at location (0,0)
   nokia.setCursor(0, 0);
   nokia.print("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor");
   nokia.display();
-  delay(2000);
+  delay(500);
   nokia.clear();
-
-  // draw other characters, variables and such
-  // nokia.setCursor(0, 20);
-  // nokia.println(0xAB, HEX);
-  // nokia.print(99.99);
-  // nokia.println('%');
-  // nokia.display();
-  // delay(2000);
-  // nokia.clear();
-
-  // draw a bitmap icon and 'animate' movement
+  nokia.display();
 }
 
 void loop(void) {}
@@ -118,20 +97,6 @@ void testdrawchar(void) {
 void testdrawcircle(void) {
   for (uint8_t i=0; i<48; i+=2) {
     nokia.drawcircle(41, 23, i, BLACK);
-  }
-}
-
-void testdrawrect(void) {
-  for (uint8_t i=0; i<48; i+=2) {
-    delay(1000);
-    nokia.drawrect(i, i, 96-i, 48-i, BLACK);
-  }
-}
-
-void testfillrect(void) {
-  for (uint8_t i=0; i<48; i++) {
-      // alternate colors for moire effect
-    nokia.fillrect(i, i, 84-i, 48-i, i%2);
   }
 }
 
